@@ -1,0 +1,3 @@
+requirements.txt
+pip freeze
+main.py -> absprache mit Stabi
