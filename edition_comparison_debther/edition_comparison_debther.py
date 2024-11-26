@@ -1,7 +1,7 @@
 from cluster_functions import *
 from debther_texts import *
 
-def edition_cluster_search(text_a=None, text_b=None,*, sep=None, replace_chars=None, min_cluster_length=10,text_a_name='text_a',text_b_name='text_b'):
+def edition_comparison_debther(text_a=None, text_b=None,*, sep=None, replace_chars=None, min_cluster_length=10,text_a_name='text_a',text_b_name='text_b'):
     """
     Processes and compares two texts to identify and analyze clusters of matching sequences.
 
@@ -88,7 +88,7 @@ Dependencies:
     sep, replace_chars,text_a_name, text_b_name = debther_parameters()
 
     # Call the main function with the test data
-    cluster, table = edition_cluster_search(gangtok,
+    cluster, table = edition_comparison_debther(gangtok,
                         peking,
                         sep=sep,
                         replace_chars=replace_chars,

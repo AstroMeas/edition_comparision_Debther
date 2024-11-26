@@ -1,3 +1,12 @@
 requirements.txt
 pip freeze
+unit tests, smoke test
 main.py -> absprache mit Stabi
+code linting? - Formatcheck rawcode
+ci skript
+setup.py
+pypi
+oai abfrage siehe sibblab
+
+externe colaborateure oder oder forks
+github geheimniy
