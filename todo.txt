@@ -7,6 +7,3 @@ ci skript
 setup.py
 pypi
 oai abfrage siehe sibblab
-
-externe colaborateure oder oder forks
-github geheimniy
