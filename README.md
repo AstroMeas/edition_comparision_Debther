@@ -28,8 +28,8 @@ pip install pandas
 ### Example Usage
 
 ```python
-# Example of running the edition_cluster_search comparison pipeline
-from your_module import edition_cluster_search
+# Example of running the edition_comparison_debther comparison pipeline
+from your_module import edition_comparison_debther
 
 # Define two texts to compare
 text_a = "This is the first sample text for comparison."
@@ -39,8 +39,8 @@ text_b = "This is the second sample text to compare."
 sep = [" ", ","]
 replace_chars = [(",", ""), (";", "")]
 
-# Run the edition_cluster_search function
-cluster_df, compare_table = edition_cluster_search(text_a, text_b, sep=sep, replace_chars=replace_chars, min_cluster_length=2)
+# Run the edition_comparison_debther function
+cluster_df, compare_table = edition_comparison_debther(text_a, text_b, sep=sep, replace_chars=replace_chars, min_cluster_length=2)
 
 # Display the results
 print(cluster_df.head())  # Display the cluster details

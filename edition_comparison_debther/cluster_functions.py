@@ -2,7 +2,7 @@ from cluster_class import Cluster
 from itertools import chain
 import pandas as pd
 
-def clean(edition, sep=[], replace_chars=[]):
+def clean(edition, sep=None, replace_chars=None):
     """
     Cleans and tokenizes a given text by applying character replacements and splitting based on specified separators.
 
@@ -26,18 +26,21 @@ def clean(edition, sep=[], replace_chars=[]):
         print(f'no seperator given. Standard values used {sep}')
 
     if replace_chars is None:
+        replace_chars = []
         print(f'no characters to replace given.')  # Beispiel-Ersetzungen
     else:
         # ersetze Zeichen in der edition 
         translation_table = str.maketrans(dict(replace_chars))
         edition = edition.translate(translation_table)
-
+    print(sep)
     # Zerlegen nach Trennzeichen
     result = [edition]
     for separator in sep:
+        try:
         # Zerlege alle bisherigen Einträge anhand des aktuellen Trennzeichens
-        result = list(chain.from_iterable(part.split(separator) for part in result))
-
+            result = list(chain.from_iterable(part.split(separator) for part in result))
+        except:
+            pass
     # Entferne leere Strings und trimme Leerzeichen
     result = [item.strip() for item in result if item.strip()]
 
