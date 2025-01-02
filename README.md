@@ -42,7 +42,8 @@ sep = [" ", ","]
 replace_chars = [(",", ""), (";", "")]
 
 # Run the edition_comparison_debther function
-cluster_df, compare_table = edition_comparison_debther(text_a, text_b, sep=sep, replace_chars=replace_chars, min_cluster_length=2)
+cluster_df, compare_table = edition_comparison_debther(text_a, text_b, sep=sep,
+                            replace_chars=replace_chars, min_cluster_length=2)
 
 # Display the results
 print(cluster_df.head())  # Display the cluster details
